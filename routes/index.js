@@ -6,7 +6,7 @@ var settings = require('../settings');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
-    request('http://92.62.44.145/sales-service-rest/api/v1.0/ptas/BRA/productGroups', {
+    request(settings.server.url + settings.server.contextRoot + '/api/v1.0/ptas/BRA/productGroups', {
         headers: {
             'X-Fara-ApiKey': settings.apiKey
         },
